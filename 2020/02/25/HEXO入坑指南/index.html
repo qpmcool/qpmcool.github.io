@@ -372,7 +372,7 @@
           
         
           
-            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-02-28T12:38:06-06:00">
+            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-02-28T15:35:25-06:00">
   <a class='notlink'>
     <i class="fas fa-save" aria-hidden="true"></i>
     <p>更新于：2020年2月29日</p>
@@ -423,8 +423,12 @@
           <ul>
 <li>HEXO安装介绍</li>
 <li>HEXO插件说明</li>
-<li>补充配置说明<a id="more"></a>
-<h2 id="HEXO安装介绍"><a href="#HEXO安装介绍" class="headerlink" title="HEXO安装介绍"></a>HEXO安装介绍</h2><btn class='regular'><a href="">安装前提</a></btn><br>安装HEXO比较简单。但需要先安装以下内容：</li>
+<li>补充配置说明</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="HEXO安装介绍"><a href="#HEXO安装介绍" class="headerlink" title="HEXO安装介绍"></a>HEXO安装介绍</h2><p><btn class='regular'><a href="">安装前提</a></btn><br>安装HEXO比较简单。但需要先安装以下内容：</p>
+<ul>
 <li>Node.js</li>
 <li>Git<br>Node.js建议使用NVM安装。<a href="https://github.com/nvm-sh/nvm/blob/master/README.md" target="_blank" rel="noopener">NVM的Github链接</a><br>terminal安装完成后，确认自己使用terminal类型，在用户根目录下查看以下文件(~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc)，修改为对应终端的配置文件名称，重启terminal即可使用。<br><code>nvm install stable ## 安装最新的稳定版nodejs和npm</code><br>Git安装去官网下载客户端安装即可。<br><btn class='regular'><a href="">安装HEXO</a></btn><br>启动terminal，执行<br><code>npm install -g hexo-cli</code>安装hexo基本命令行。<br>完成后，可以进入该目录使用hexo命令。也可以添加环境变量，直接使用。<h2 id="HEXO插件说明"><a href="#HEXO插件说明" class="headerlink" title="HEXO插件说明"></a>HEXO插件说明</h2>使用终端安装HEXO插件，一般插件配置在themes文件夹内的<red>_config.yml</red>文件进行修改。以下列出的插件应用比较多，其他有用的插件也很多，可以去hexo官网插件去搜索相关内容。<br><code>npm install 包名</code><br><btn class='regular'><a href="">常用包介绍</a></btn><h4 id="hexo-generator-search"><a href="#hexo-generator-search" class="headerlink" title="hexo-generator-search"></a>hexo-generator-search</h4>搜索插件，生成HEXO搜索数据<br><a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">插件地址</a><br>配置信息<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml ## 默认值，文件路径。</span><br><span class="line">  field: post ## 默认值，搜索范围可以是（post，page，all）。</span><br><span class="line">  content: true ## 默认值，如果是false，只搜索标题和其他meta信息。</span><br></pre></td></tr></table></figure>
 <h4 id="hexo-generator-json-content"><a href="#hexo-generator-json-content" class="headerlink" title="hexo-generator-json-content"></a>hexo-generator-json-content</h4>内容插件，产生JSON文件，为通用的一些内容服务。非常适用为一些小型的服务提供紧凑数据。<br><a href="https://github.com/alexbruno/hexo-generator-json-content" target="_blank" rel="noopener">插件地址</a><br>配置信息（默认内容）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">  meta: true</span><br><span class="line">  dafts: false</span><br><span class="line">  file: content.json</span><br><span class="line">  keywords: undefined</span><br><span class="line">  dateFormat: undefined</span><br><span class="line">  pages:</span><br><span class="line">    title: true</span><br><span class="line">    slug: true</span><br><span class="line">    date: true</span><br><span class="line">    updated: true</span><br><span class="line">    comments: true</span><br><span class="line">    path: true</span><br><span class="line">    link: true</span><br><span class="line">    permalink: true</span><br><span class="line">    excerpt: true</span><br><span class="line">    keywords: false</span><br><span class="line">    text: true</span><br><span class="line">    raw: false</span><br><span class="line">    content: false</span><br><span class="line">    author: true</span><br><span class="line">  posts:</span><br><span class="line">    title: true</span><br><span class="line">    slug: true</span><br><span class="line">    date: true</span><br><span class="line">    updated: true</span><br><span class="line">    comments: true</span><br><span class="line">    path: true</span><br><span class="line">    link: true</span><br><span class="line">    permalink: true</span><br><span class="line">    excerpt: true</span><br><span class="line">    keywords: false</span><br><span class="line">    text: true</span><br><span class="line">    raw: false</span><br><span class="line">    content: false</span><br><span class="line">    author: true</span><br><span class="line">    categories: true</span><br><span class="line">    tags: true</span><br></pre></td></tr></table></figure>
@@ -556,7 +560,8 @@
           href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/02/25/HEXO%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/&title=HEXO入坑指南 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary=
 HEXO安装介绍
 HEXO插件说明
-补充配置说明"
+补充配置说明
+"
           
           >
           
@@ -571,7 +576,8 @@ HEXO插件说明
           href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2020/02/25/HEXO%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/&title=HEXO入坑指南 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary=
 HEXO安装介绍
 HEXO插件说明
-补充配置说明"
+补充配置说明
+"
           
           >
           
@@ -594,7 +600,8 @@ HEXO插件说明
           href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/02/25/HEXO%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/&title=HEXO入坑指南 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary=
 HEXO安装介绍
 HEXO插件说明
-补充配置说明"
+补充配置说明
+"
           
           >
           
@@ -645,20 +652,6 @@ HEXO插件说明
                         </span>
                     </section>
                 
-                
-                    <section class="next">
-                        <span class="art-item-right" aria-hidden="true">
-                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
-                            <h4>
-                                <a href="/2020/02/12/hello-world/" rel="prev" title="Hello World">
-                                    
-                                        Hello World
-                                    
-                                </a>
-                            </h4>
-                            
-                        </span>
-                    </section>
                 
             </div>
         

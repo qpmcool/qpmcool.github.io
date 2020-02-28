@@ -372,7 +372,7 @@
           
         
           
-            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-02-28T15:07:59-06:00">
+            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-02-28T15:35:07-06:00">
   <a class='notlink'>
     <i class="fas fa-save" aria-hidden="true"></i>
     <p>更新于：2020年2月29日</p>
@@ -423,14 +423,17 @@
           <ul>
 <li>HEXO默认设置</li>
 <li>HEXO主题设置</li>
-<li>HEXO页面配置<a id="more"></a>
-
-</li>
+<li>HEXO页面配置</li>
 </ul>
+<a id="more"></a>
+
 <h2 id="HEXO默认设置"><a href="#HEXO默认设置" class="headerlink" title="HEXO默认设置"></a>HEXO默认设置</h2><p>只提及常用设置，其他设置可以参考HEXO网站<br>打开主目录下的<code>_config.yml</code>文件进行网站配置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">##Site</span><br><span class="line">title: 网站标题</span><br><span class="line">subtitle: 网站副标题</span><br><span class="line">description: 网站描述</span><br><span class="line">keywords: 网站的关键词。使用半角逗号 , 分隔多个关键词。</span><br><span class="line">author: 您的名字</span><br><span class="line">language: 网站使用的语言  zh-CN</span><br><span class="line">timezone: 网站时区  Asia&#x2F;Shanghai </span><br><span class="line">favicon: 网页标签图标</span><br><span class="line">avatar: 作者头像</span><br><span class="line">##Extensions</span><br><span class="line">theme: 主题名称</span><br><span class="line">copyright: &#39;Copyright © 2020 Bigger Qin&#39; 版权信息</span><br></pre></td></tr></table></figure>
-<h2 id="HEXO主题设置"><a href="#HEXO主题设置" class="headerlink" title="HEXO主题设置"></a>HEXO主题设置</h2><p>打开<code>themes\主题目录\_config.yml</code>进行主题配置<br>一般开发者都对文件进行了非常好的标注，遵循标注的内容，即可进行很优秀的配置。资源库说明见<a href="https://qpmcool.github.io/2020/02/25/HEXO%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/" target="_blank" rel="noopener">HEXO入坑指南</a><br>打开<code>themes\主题目录\languages\**.yml</code>进行语言和部分显示信息的配置（例如版权，协议等），部分需要配合css文件进行修改，可忽略，不赘述。</p>
-<h2 id="HEXO页面配置"><a href="#HEXO页面配置" class="headerlink" title="HEXO页面配置"></a>HEXO页面配置</h2><p>Blog页面各种链接可能无法使用，需要进行配置生成。<br>独立页面都需要手动创建md文件或用命令生成。<br>通常布局模板有</p>
+<h2 id="HEXO主题设置"><a href="#HEXO主题设置" class="headerlink" title="HEXO主题设置"></a>HEXO主题设置</h2><p>打开<code>themes\主题目录\_config.yml</code>进行主题配置<br>一般开发者都对文件进行了非常好的标注，遵循标注的内容，即可进行很优秀的配置。资源库说明见<a href="https://qpmcool.github.io/2020/02/25/HEXO%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/" target="_blank" rel="noopener">HEXO入坑指南</a><br>打开<code>themes\主题目录\languages\**.yml</code>进行语言和部分显示信息的配置（例如版权，协议等），部分需要配合css文件进行修改，可忽略。</p>
+<h3 id="封面设置"><a href="#封面设置" class="headerlink" title="封面设置"></a>封面设置</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">features:</span>  <span class="comment"># 封面菜单</span></span><br><span class="line">	<span class="bullet">-</span> <span class="attr">name:</span>  <span class="comment"># 菜单名称 </span></span><br><span class="line">	  <span class="attr">icon:</span>  <span class="comment"># 菜单图标</span></span><br><span class="line">	  <span class="attr">url:</span>   <span class="comment"># 菜单链接</span></span><br></pre></td></tr></table></figure>
+<p>封面菜单为首页主菜单，必要时，可以做成多级的。</p>
+<h3 id="导航栏设置"><a href="#导航栏设置" class="headerlink" title="导航栏设置"></a>导航栏设置</h3><p>菜单链接，需要对应的文件支持，如果source文件夹下没有对应的文件，需要新建。<br>终端  <code>hexo new page 对应目录链接</code><br>完成后，可以进行装饰，支持html5的标签。</p>
+<h2 id="HEXO页面配置"><a href="#HEXO页面配置" class="headerlink" title="HEXO页面配置"></a>HEXO页面配置</h2><p>Blog页面各种链接可能无法使用，需要进行配置生成。<br>独立页面都需要手动创建md文件或用上面介绍的命令生成。<br>通常布局模板有</p>
 <table>
 <thead>
 <tr>
@@ -596,7 +599,8 @@
           href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/02/28/HEXO%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE%E6%A6%82%E8%BF%B0/&title=HEXO主题设置概述 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary=
 HEXO默认设置
 HEXO主题设置
-HEXO页面配置"
+HEXO页面配置
+"
           
           >
           
@@ -611,7 +615,8 @@ HEXO页面配置"
           href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2020/02/28/HEXO%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE%E6%A6%82%E8%BF%B0/&title=HEXO主题设置概述 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary=
 HEXO默认设置
 HEXO主题设置
-HEXO页面配置"
+HEXO页面配置
+"
           
           >
           
@@ -634,7 +639,8 @@ HEXO页面配置"
           href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/02/28/HEXO%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE%E6%A6%82%E8%BF%B0/&title=HEXO主题设置概述 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary=
 HEXO默认设置
 HEXO主题设置
-HEXO页面配置"
+HEXO页面配置
+"
           
           >
           
@@ -679,7 +685,7 @@ HEXO页面配置"
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/tags/draft/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> draft</a>
+                                    <a class="tag" href="/tags/HEXO/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> HEXO</a>
                                 </h6>
                             
                         </span>
@@ -755,7 +761,7 @@ HEXO页面配置"
 </header>
 
     <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HEXO默认设置"><span class="toc-text">HEXO默认设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEXO主题设置"><span class="toc-text">HEXO主题设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEXO页面配置"><span class="toc-text">HEXO页面配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关于页面"><span class="toc-text">关于页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分类页面"><span class="toc-text">分类页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标签页面"><span class="toc-text">标签页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#友链页面"><span class="toc-text">友链页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#404页面"><span class="toc-text">404页面</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HEXO默认设置"><span class="toc-text">HEXO默认设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEXO主题设置"><span class="toc-text">HEXO主题设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#封面设置"><span class="toc-text">封面设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#导航栏设置"><span class="toc-text">导航栏设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEXO页面配置"><span class="toc-text">HEXO页面配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关于页面"><span class="toc-text">关于页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分类页面"><span class="toc-text">分类页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标签页面"><span class="toc-text">标签页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#友链页面"><span class="toc-text">友链页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#404页面"><span class="toc-text">404页面</span></a></li></ol></li></ol>
     </div>
   </section>
 
