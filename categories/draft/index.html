@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>建站 | 大秦说</title>
+  <title>Category: draft | 大秦说</title>
   
   <meta name="keywords" content="安全,应急，预防,学习">
   
@@ -56,7 +56,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover post half'>
+    <cover class='cover  half'>
       
         
   <p class="title ">大秦说</p>
@@ -304,12 +304,25 @@
 
   <div class="l_body">
     <div class='body-wrapper'>
-      <div class='l_main'>
-  
-
-  
-    <article id="post" class="post white-box   article-type-post" itemscope itemprop="blogPost">
       
+<div class='l_main'>
+  
+    
+      
+  <section class="post-list ">
+    
+      
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <article class="post white-box   reveal ">
+  
 
 
   <section class='meta'>
@@ -318,13 +331,11 @@
     <div class="meta" id="header-meta">
       
         
-  
-    <h1 class="title">
-      <a href="/2020/02/27/%E5%BB%BA%E7%AB%99/">
-        建站
-      </a>
-    </h1>
-  
+  <h2 class="title">
+    <a href="/2020/02/28/HEXO%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+      HEXO基本操作
+    </a>
+  </h2>
 
 
       
@@ -349,12 +360,22 @@
           
         
           
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-edit" aria-hidden="true"></i>
+    <p>发布于：2020年2月28日</p>
+  </a>
+</div>
+
+          
+        
+          
             
   
   <div class='new-meta-item category'>
-    <a href='/categories/HEXO/' rel="nofollow">
+    <a href='/categories/draft/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>HEXO</p>
+      <p>draft</p>
     </a>
   </div>
 
@@ -362,39 +383,9 @@
           
         
           
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：2020年2月27日</p>
-  </a>
-</div>
-
-          
-        
-          
-            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-02-28T14:16:30-06:00">
-  <a class='notlink'>
-    <i class="fas fa-save" aria-hidden="true"></i>
-    <p>更新于：2020年2月29日</p>
-  </a>
-</div>
-
-          
-        
-          
             
   
-    <div class="new-meta-item browse busuanzi">
-      <a class='notlink'>
-        <i class="fas fa-eye" aria-hidden="true"></i>
-        <p>
-          <span id="busuanzi_value_page_pv">
-            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
-          </span>
-        </p>
-      </a>
-    </div>
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/draft/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>draft</p></a></div>
 
 
           
@@ -417,279 +408,48 @@
   </section>
 
 
-      <section class="article typo">
-        <div class="article-entry" itemprop="articleBody">
-          
-          <ul>
-<li>建站说明</li>
-<li>文件说明</li>
-<li>Github部署</li>
-<li>Github图床设置</li>
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <ul>
+<li>要点</li>
 </ul>
-<a id="more"></a>
-
-<p><btn class='regular'><a href="/"></a></btn></p>
-<h2 id="建站说明"><a href="#建站说明" class="headerlink" title="建站说明"></a>建站说明</h2><p>安装 Hexo 完成后，执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\</span><br><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<p>这样，最基本的一个Blog就算完成了。</p>
-<h2 id="文件说明"><a href="#文件说明" class="headerlink" title="文件说明"></a>文件说明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\</span><br><span class="line">. </span><br><span class="line">├── _config.yml  ## 最基础的网站配置信息。版权信息和主题设置都在这里。</span><br><span class="line">├── package.json  ## 应用程序信息。可以查看网站使用的依赖。</span><br><span class="line">├── scaffolds  ## 模版 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</span><br><span class="line">├── source ## 资源文件夹是存放用户资源的地方。除 _posts 文件夹之外，开头命名为 _ (下划线)的文件 &#x2F; 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes ## 主题 文件夹。Hexo 会根据主题来生成静态页面。</span><br></pre></td></tr></table></figure>
-<h2 id="Github部署"><a href="#Github部署" class="headerlink" title="Github部署"></a>Github部署</h2><h3 id="Github设置"><a href="#Github设置" class="headerlink" title="Github设置"></a>Github设置</h3><p>Github账号注册略。<br>创建Repository时，需要注意内容如下图<br><img src="https://raw.githubusercontent.com/qpmcool/EHS/master/img/Screen%20Shot%202020-02-28%20at%201.16.02%20PM.png" alt="Github创建Repository"><br>进入Repository，选择<btn><a href="/">Setting</a></btn><br><img src="https://raw.githubusercontent.com/qpmcool/EHS/master/img/Screen%20Shot%202020-02-28%20at%201.31.47%20PM.png" alt="选择Seetting"><br>拉到最后，选择<btn><a href="/">master branch</a></btn>(themes可不选）<br><img src="https://raw.githubusercontent.com/qpmcool/EHS/master/img/Screen%20Shot%202020-02-28%20at%201.33.51%20PM.png" alt="选择master branch"><br>如果有域名，在Custom domain输入域名。这时候项目根目录应该会出现一个名为CNAME的文件。如果没有，打开本地博客/source目录，新建CNAME文件，注意没有后缀。写上域名，保存。</p>
-<h3 id="连接Github设置"><a href="#连接Github设置" class="headerlink" title="连接Github设置"></a>连接Github设置</h3><p>打开terminal键入以下内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\</span><br><span class="line">git config --global user.name &quot;github注册用户名&quot;</span><br><span class="line">git config --global user.email &quot;github注册邮箱&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;github注册邮箱&quot;</span><br><span class="line">cat ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br></pre></td></tr></table></figure>
-<p>将输出的内容复制。<br>打开github主页，在头像下面点击<btn><a href="/">settings</a></btn>，再点击<btn><a href="/">SSH and GPG keys</a></btn>，新建一个SSH。<br>Title可以随便写，Key部分粘贴刚刚复制的内容。<br>回到Terminal，输入<code>ssh -T git@github.com</code>,出现<code>You&#39;ve successfully authenticated</code>字样，连接成功。<br>回到本地blog目录，打开<code>_config.yml</code>文件，搜索<code>deploy</code>，配置信息如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;username.github.io ## 浏览器上项目页的地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p><code>hexo-deployer-git</code>插件默认安装好的。<br>在blog目录中运行<code>hexo g &amp;&amp; hexo d</code>未报错。blog生成并上传成功。</p>
-<h2 id="Github图床设置"><a href="#Github图床设置" class="headerlink" title="Github图床设置"></a>Github图床设置</h2><p>这里，采用的是PicGo，开源免费好用，<a href="https://picgo.github.io/PicGo-Doc/zh/" target="_blank" rel="noopener">项目地址</a>帮助文件里内容很清晰。不赘述。</p>
-
-          
-            <br>
-            
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-                  <section class='widget   copyright'>
-  <div class='content'>
-    
-      <blockquote>
-        
-          
-            <p>网站内容用于学习和研究，部分内容来自于互联网收集整理，仅代表本人观点，版权归小编本人所有。</p>
-
-          
-        
-          
-            <p>涉及内容如有侵权，请及时联系小编提交相关证明材料。经调查属实后，于三个工作日内删除或修正。</p>
-
-          
-        
-          
-            <p>小编水平有限，如有错误，请好心提示：<a href="mailto:Bruce_safety@hotmail.com">Bruce_safety@hotmail.com</a></p>
-
-          
-        
-      </blockquote>
-    
-  </div>
-</section>
-
-                
-              
-                
-              
-                
-              
-                
-              
-            
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-                  <section class='widget   donate'>
-  <header>
-  <div><i class="fas fa-donate fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;打赏</div>
-  
-</header>
-
-  <div class='content'>
-    
-      <fancybox>
-        
-          <img src='https://raw.githubusercontent.com/qpmcool/EHS/master/img/WechatIMG1.png' height='64px'>
-        
-          <img src='https://raw.githubusercontent.com/qpmcool/EHS/master/img/alipay.png' height='64px'>
-        
-      </fancybox>
-    
-  </div>
-</section>
-
-                
-              
-                
-              
-                
-              
-            
-          
-        </div>
-        
-          <br>
-          
-
-
-  <section class='meta' id="footer-meta">
-    <div class='new-meta-box'>
       
         
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HEXO/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>HEXO</p></a></div>
-
-
-        
-      
-        
-          
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
-          
-          href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/02/27/%E5%BB%BA%E7%AB%99/&title=建站 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary=
-建站说明
-文件说明
-Github部署
-Github图床设置
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
-          
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2020/02/27/%E5%BB%BA%E7%AB%99/&title=建站 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary=
-建站说明
-文件说明
-Github部署
-Github图床设置
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aQW7DMAwEwP7/0y7QW5FGWZJOgUijU5C4tkcHlqT49RWv62etv78e1uOV6++fXXPbwsDA+FjGtVzr103uUAXkd8bAwDiNkQTTaqyrbkH+XAwMDIwk7UuC4zo1XF+JgYGBMQ+4efKX33kdfDEwMDB6xWSvPZc85Y21OAYGxgcyqgcD//n5jecbGBgYH8K4Bispd6vFcPNNMDAwtmas21694NsD5+25KOxiYGBsxMhLzXlrLGnGVRPEX/83MDAwjmFMwl9vIOOGgwEMDIwDGHmhOAmp+a/VzcXAwDiBkSSFk+Db25Q8YcXAwDiB0StTe+GyNzbxIgRjYGBszcjL0XeUtfnxQJSMYmBgbMpIQt78MGB+tPAirGNgYBzG6H1et/gnxXC0QRgYGFsz7mrfV9v6OTsP1hgYGLsyeslZr1jtjX9FT8TAwDiG0RsRqyZ/SfFcPirAwMA4klENoPMStJcUPp1uw8DA2IiRj0Tkr/uiYm4NZ+ShHAMDY1dGfpBZTROrrzga3cDAwDiGUR2PyFv/SSpZPZZ4UcpiYGBsxKiOQeQlbm9TenfGwMDYlXEVVzXI5n+Vt+T+CMcYGBhbMyZN/2o4robpG8paDAyMjRhJkJ20+3tNt3LAxcDAOIBRDXx5OdobDquWxBgYGBj3TnZUi+SIioGBgREPuc4bc8nWYGBgnMlIitg8vasOws6PSzEwMPZm9Jr1dyV8kwA9Ot/AwMD4DMY3qIf6CJqn7R8AAAAASUVORK5CYII='>
-        
-          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
-        
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
-          
-          href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/02/27/%E5%BB%BA%E7%AB%99/&title=建站 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary=
-建站说明
-文件说明
-Github部署
-Github图床设置
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aQW7DMAwEwP7/0y7QW5FGWZJOgUijU5C4tkcHlqT49RWv62etv78e1uOV6++fXXPbwsDA+FjGtVzr103uUAXkd8bAwDiNkQTTaqyrbkH+XAwMDIwk7UuC4zo1XF+JgYGBMQ+4efKX33kdfDEwMDB6xWSvPZc85Y21OAYGxgcyqgcD//n5jecbGBgYH8K4Bispd6vFcPNNMDAwtmas21694NsD5+25KOxiYGBsxMhLzXlrLGnGVRPEX/83MDAwjmFMwl9vIOOGgwEMDIwDGHmhOAmp+a/VzcXAwDiBkSSFk+Db25Q8YcXAwDiB0StTe+GyNzbxIgRjYGBszcjL0XeUtfnxQJSMYmBgbMpIQt78MGB+tPAirGNgYBzG6H1et/gnxXC0QRgYGFsz7mrfV9v6OTsP1hgYGLsyeslZr1jtjX9FT8TAwDiG0RsRqyZ/SfFcPirAwMA4klENoPMStJcUPp1uw8DA2IiRj0Tkr/uiYm4NZ+ShHAMDY1dGfpBZTROrrzga3cDAwDiGUR2PyFv/SSpZPZZ4UcpiYGBsxKiOQeQlbm9TenfGwMDYlXEVVzXI5n+Vt+T+CMcYGBhbMyZN/2o4robpG8paDAyMjRhJkJ20+3tNt3LAxcDAOIBRDXx5OdobDquWxBgYGBj3TnZUi+SIioGBgREPuc4bc8nWYGBgnMlIitg8vasOws6PSzEwMPZm9Jr1dyV8kwA9Ot/AwMD4DMY3qIf6CJqn7R8AAAAASUVORK5CYII='>
-        
-          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
-        
-        </a>
-      
-    
-  </div>
-</div>
-
-
-
+          <div class="button readmore">
+            <a href="/2020/02/28/HEXO%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="flat-box">
+              <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+              阅读全文
+            </a>
+          </div>
         
       
     </div>
+    <!-- 
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/draft/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> draft</a>
+        
+      </div>
+     -->
   </section>
+</article>
 
-
+          </div>
         
-        
-            <div class="prev-next">
-                
-                
-                    <section class="next">
-                        <span class="art-item-right" aria-hidden="true">
-                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
-                            <h4>
-                                <a href="/2020/02/25/HEXO%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/" rel="prev" title="HEXO入坑指南">
-                                    
-                                        HEXO入坑指南
-                                    
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/HEXO/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> HEXO</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
-            </div>
-        
-      </section>
-    </article>
+      
+    
+  </section>
   
-
-  
-    <!-- 显示推荐文章和评论 -->
-
-
+    
+    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+    
+    
 
   
 
 
+    
   
-
-
-
-
-<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
-
-
-
-  <script>
-    window.subData = {
-      title: '建站',
-      tools: true
-    }
-  </script>
-
 
 </div>
 <aside class='l_side'>
@@ -698,19 +458,133 @@ Github图床设置
     
       
         
+          <section class='widget   blogger'>
+  <div class='content'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png'/>
+      </div>
+    
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:bruce_safety@hotmail.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://www.facebook.com/profile.php?id=100003889875151"
+              class="social fab fa-facebook flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/qpmcool/"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://www.ximalaya.com/zhubo/62914933/"
+              class="social fas fa-headphones-alt flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
       
         
           
-  <section class='widget   toc-wrapper'>
+  <section class='widget   category'>
     <header>
-  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
   
-    <!-- <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div> -->
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_self"
+    
+    href="/blog/categories/"
+    title="blog/categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
   
 </header>
 
     <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#建站说明"><span class="toc-text">建站说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件说明"><span class="toc-text">文件说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Github部署"><span class="toc-text">Github部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Github设置"><span class="toc-text">Github设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#连接Github设置"><span class="toc-text">连接Github设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Github图床设置"><span class="toc-text">Github图床设置</span></a></li></ol>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/HEXO/" href="/categories/HEXO/"><div class='name'>HEXO</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/draft/" href="/categories/draft/"><div class='name'>draft</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
     </div>
   </section>
 
@@ -729,6 +603,126 @@ Github图床设置
       
         
       
+    
+      
+        
+      
+        
+      
+        
+      
+        
+          
+  <section class='widget   tagcloud'>
+    <header>
+  <div><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_self"
+    
+    href="/blog/tags/"
+    title="blog/tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content'>
+      <a href="/tags/HEXO/" style="font-size: 24px; color: #555">HEXO</a> <a href="/tags/draft/" style="font-size: 14px; color: #999">draft</a>
+    </div>
+  </section>
+
+
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <section class='widget   list'>
+  <header>
+  <div><i class="fas fa-thumbs-up fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;强烈推荐</div>
+  
+</header>
+
+  <div class='content'>
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="/" href="/"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://img.vim-cn.com/4e/3c87a2fd28fd0b9c2f27ce3f83f1e9275d0488.png">
+            
+            &nbsp;&nbsp;带图片的列表
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/" href="/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class="fas fa-home fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;带图标的列表
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/hexo.sh/" href="https://xaoxuu.com/wiki/hexo.sh/"
+          
+            rel="external nofollow noopener noreferrer"
+          
+          
+            target="_blank"
+          
+          >
+          <div class='name'>
+            
+              <i class=" fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;Hexo脚本（Mac）
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
         
       
     

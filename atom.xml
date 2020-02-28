@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-28T20:16:30.438Z</updated>
+  <updated>2020-02-28T20:48:20.587Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,58 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>建站</title>
-    <link href="http://yoursite.com/2020/02/27/%E5%BB%BA%E7%AB%99/"/>
-    <id>http://yoursite.com/2020/02/27/%E5%BB%BA%E7%AB%99/</id>
+    <title>HEXO基本操作</title>
+    <link href="http://yoursite.com/2020/02/28/HEXO%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2020/02/28/HEXO%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</id>
+    <published>2020-02-28T06:48:20.000Z</published>
+    <updated>2020-02-28T20:48:20.587Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;要点&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="draft" scheme="http://yoursite.com/categories/draft/"/>
+    
+    
+      <category term="draft" scheme="http://yoursite.com/tags/draft/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HEXO主题设置概述</title>
+    <link href="http://yoursite.com/2020/02/28/HEXO%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE%E6%A6%82%E8%BF%B0/"/>
+    <id>http://yoursite.com/2020/02/28/HEXO%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE%E6%A6%82%E8%BF%B0/</id>
+    <published>2020-02-28T06:22:54.000Z</published>
+    <updated>2020-02-28T21:07:59.725Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;HEXO默认设置&lt;/li&gt;
+&lt;li&gt;HEXO主题设置&lt;/li&gt;
+&lt;li&gt;HEXO页面配置
+    
+    </summary>
+    
+    
+      <category term="HEXO" scheme="http://yoursite.com/categories/HEXO/"/>
+    
+    
+      <category term="HEXO" scheme="http://yoursite.com/tags/HEXO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HEXO建站</title>
+    <link href="http://yoursite.com/2020/02/27/HEXO%E5%BB%BA%E7%AB%99/"/>
+    <id>http://yoursite.com/2020/02/27/HEXO%E5%BB%BA%E7%AB%99/</id>
     <published>2020-02-27T07:23:02.000Z</published>
-    <updated>2020-02-28T20:16:30.438Z</updated>
+    <updated>2020-02-28T20:20:11.762Z</updated>
     
     <summary type="html">
     
