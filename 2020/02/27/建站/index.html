@@ -372,7 +372,7 @@
           
         
           
-            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-02-28T14:10:30-06:00">
+            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-02-28T14:16:30-06:00">
   <a class='notlink'>
     <i class="fas fa-save" aria-hidden="true"></i>
     <p>更新于：2020年2月29日</p>
@@ -438,8 +438,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\</span><br><span class="line">git config --global user.name &quot;github注册用户名&quot;</span><br><span class="line">git config --global user.email &quot;github注册邮箱&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;github注册邮箱&quot;</span><br><span class="line">cat ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>将输出的内容复制。<br>打开github主页，在头像下面点击<btn><a href="/">settings</a></btn>，再点击<btn><a href="/">SSH and GPG keys</a></btn>，新建一个SSH。<br>Title可以随便写，Key部分粘贴刚刚复制的内容。<br>回到Terminal，输入<code>ssh -T git@github.com</code>,出现<code>You&#39;ve successfully authenticated</code>字样，连接成功。<br>回到本地blog目录，打开<code>_config.yml</code>文件，搜索<code>deploy</code>，配置信息如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;username.github.io ## 浏览器上项目页的地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p><code>hexo-deployer-git</code>插件默认安装好的。<br>在blog目录中运行<code>hexo g &amp;&amp; hexo d</code>未报错。连接成功。</p>
-<h2 id="Github图床设置"><a href="#Github图床设置" class="headerlink" title="Github图床设置"></a>Github图床设置</h2>
+<p><code>hexo-deployer-git</code>插件默认安装好的。<br>在blog目录中运行<code>hexo g &amp;&amp; hexo d</code>未报错。blog生成并上传成功。</p>
+<h2 id="Github图床设置"><a href="#Github图床设置" class="headerlink" title="Github图床设置"></a>Github图床设置</h2><p>这里，采用的是PicGo，开源免费好用，<a href="https://picgo.github.io/PicGo-Doc/zh/" target="_blank" rel="noopener">项目地址</a>帮助文件里内容很清晰。不赘述。</p>
+
           
             <br>
             
