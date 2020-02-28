@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-25T03:27:12.009Z</updated>
+  <updated>2020-02-28T20:10:30.237Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,104 +17,52 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>go</title>
-    <link href="http://yoursite.com/2020/02/24/go-1/"/>
-    <id>http://yoursite.com/2020/02/24/go-1/</id>
-    <published>2020-02-24T13:27:11.000Z</published>
-    <updated>2020-02-25T03:27:12.009Z</updated>
+    <title>建站</title>
+    <link href="http://yoursite.com/2020/02/27/%E5%BB%BA%E7%AB%99/"/>
+    <id>http://yoursite.com/2020/02/27/%E5%BB%BA%E7%AB%99/</id>
+    <published>2020-02-27T07:23:02.000Z</published>
+    <updated>2020-02-28T20:10:30.237Z</updated>
     
     <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;建站说明&lt;/li&gt;
+&lt;li&gt;文件说明&lt;/li&gt;
+&lt;li&gt;Github部署&lt;/li&gt;
+&lt;li&gt;Github图床设置&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
     
-      <category term="draft" scheme="http://yoursite.com/categories/draft/"/>
+      <category term="HEXO" scheme="http://yoursite.com/categories/HEXO/"/>
     
     
-      <category term="draft" scheme="http://yoursite.com/tags/draft/"/>
+      <category term="HEXO" scheme="http://yoursite.com/tags/HEXO/"/>
     
   </entry>
   
   <entry>
-    <title>go</title>
-    <link href="http://yoursite.com/2020/02/24/go/"/>
-    <id>http://yoursite.com/2020/02/24/go/</id>
-    <published>2020-02-24T13:25:55.000Z</published>
-    <updated>2020-02-25T03:25:55.330Z</updated>
+    <title>HEXO入坑指南</title>
+    <link href="http://yoursite.com/2020/02/25/HEXO%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/"/>
+    <id>http://yoursite.com/2020/02/25/HEXO%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/</id>
+    <published>2020-02-26T04:09:05.000Z</published>
+    <updated>2020-02-28T18:38:06.529Z</updated>
     
     <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;HEXO安装介绍&lt;/li&gt;
+&lt;li&gt;HEXO插件说明&lt;/li&gt;
+&lt;li&gt;补充配置说明
     
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>post</title>
-    <link href="http://yoursite.com/2020/02/24/post/"/>
-    <id>http://yoursite.com/2020/02/24/post/</id>
-    <published>2020-02-24T13:25:24.000Z</published>
-    <updated>2020-02-25T03:25:24.121Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
+      <category term="HEXO" scheme="http://yoursite.com/categories/HEXO/"/>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>第三批</title>
-    <link href="http://yoursite.com/2020/02/24/%E7%AC%AC%E4%B8%89%E6%89%B9/"/>
-    <id>http://yoursite.com/2020/02/24/%E7%AC%AC%E4%B8%89%E6%89%B9/</id>
-    <published>2020-02-24T12:37:35.000Z</published>
-    <updated>2020-02-25T02:48:06.451Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="web前端" scheme="http://yoursite.com/categories/web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
-    
-      <category term="表格" scheme="http://yoursite.com/tags/%E8%A1%A8%E6%A0%BC/"/>
-    
-      <category term="表单验证" scheme="http://yoursite.com/tags/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第二篇</title>
-    <link href="http://yoursite.com/2020/02/23/%E7%AC%AC%E4%BA%8C%E7%AF%87/"/>
-    <id>http://yoursite.com/2020/02/23/%E7%AC%AC%E4%BA%8C%E7%AF%87/</id>
-    <published>2020-02-23T12:45:31.000Z</published>
-    <updated>2020-02-24T02:45:31.604Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>第一篇</title>
-    <link href="http://yoursite.com/2020/02/23/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
-    <id>http://yoursite.com/2020/02/23/%E7%AC%AC%E4%B8%80%E7%AF%87/</id>
-    <published>2020-02-23T12:41:16.000Z</published>
-    <updated>2020-02-24T02:41:16.525Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
+      <category term="HEXO" scheme="http://yoursite.com/tags/HEXO/"/>
     
   </entry>
   

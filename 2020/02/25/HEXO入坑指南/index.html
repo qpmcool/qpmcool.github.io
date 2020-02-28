@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>第二篇 | 大秦说</title>
+  <title>HEXO入坑指南 | 大秦说</title>
   
   <meta name="keywords" content="安全,应急，预防,学习">
   
@@ -320,8 +320,8 @@
         
   
     <h1 class="title">
-      <a href="/2020/02/23/%E7%AC%AC%E4%BA%8C%E7%AF%87/">
-        第二篇
+      <a href="/2020/02/25/HEXO%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/">
+        HEXO入坑指南
       </a>
     </h1>
   
@@ -350,6 +350,14 @@
         
           
             
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/HEXO/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>HEXO</p>
+    </a>
+  </div>
+
 
           
         
@@ -357,17 +365,17 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：2020年2月23日</p>
+    <p>发布于：2020年2月26日</p>
   </a>
 </div>
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-02-23T20:45:31-06:00">
+            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-02-28T12:38:06-06:00">
   <a class='notlink'>
     <i class="fas fa-save" aria-hidden="true"></i>
-    <p>更新于：2020年2月24日</p>
+    <p>更新于：2020年2月29日</p>
   </a>
 </div>
 
@@ -412,7 +420,19 @@
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           
-          
+          <ul>
+<li>HEXO安装介绍</li>
+<li>HEXO插件说明</li>
+<li>补充配置说明<a id="more"></a>
+<h2 id="HEXO安装介绍"><a href="#HEXO安装介绍" class="headerlink" title="HEXO安装介绍"></a>HEXO安装介绍</h2><btn class='regular'><a href="">安装前提</a></btn><br>安装HEXO比较简单。但需要先安装以下内容：</li>
+<li>Node.js</li>
+<li>Git<br>Node.js建议使用NVM安装。<a href="https://github.com/nvm-sh/nvm/blob/master/README.md" target="_blank" rel="noopener">NVM的Github链接</a><br>terminal安装完成后，确认自己使用terminal类型，在用户根目录下查看以下文件(~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc)，修改为对应终端的配置文件名称，重启terminal即可使用。<br><code>nvm install stable ## 安装最新的稳定版nodejs和npm</code><br>Git安装去官网下载客户端安装即可。<br><btn class='regular'><a href="">安装HEXO</a></btn><br>启动terminal，执行<br><code>npm install -g hexo-cli</code>安装hexo基本命令行。<br>完成后，可以进入该目录使用hexo命令。也可以添加环境变量，直接使用。<h2 id="HEXO插件说明"><a href="#HEXO插件说明" class="headerlink" title="HEXO插件说明"></a>HEXO插件说明</h2>使用终端安装HEXO插件，一般插件配置在themes文件夹内的<red>_config.yml</red>文件进行修改。以下列出的插件应用比较多，其他有用的插件也很多，可以去hexo官网插件去搜索相关内容。<br><code>npm install 包名</code><br><btn class='regular'><a href="">常用包介绍</a></btn><h4 id="hexo-generator-search"><a href="#hexo-generator-search" class="headerlink" title="hexo-generator-search"></a>hexo-generator-search</h4>搜索插件，生成HEXO搜索数据<br><a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">插件地址</a><br>配置信息<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml ## 默认值，文件路径。</span><br><span class="line">  field: post ## 默认值，搜索范围可以是（post，page，all）。</span><br><span class="line">  content: true ## 默认值，如果是false，只搜索标题和其他meta信息。</span><br></pre></td></tr></table></figure>
+<h4 id="hexo-generator-json-content"><a href="#hexo-generator-json-content" class="headerlink" title="hexo-generator-json-content"></a>hexo-generator-json-content</h4>内容插件，产生JSON文件，为通用的一些内容服务。非常适用为一些小型的服务提供紧凑数据。<br><a href="https://github.com/alexbruno/hexo-generator-json-content" target="_blank" rel="noopener">插件地址</a><br>配置信息（默认内容）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">  meta: true</span><br><span class="line">  dafts: false</span><br><span class="line">  file: content.json</span><br><span class="line">  keywords: undefined</span><br><span class="line">  dateFormat: undefined</span><br><span class="line">  pages:</span><br><span class="line">    title: true</span><br><span class="line">    slug: true</span><br><span class="line">    date: true</span><br><span class="line">    updated: true</span><br><span class="line">    comments: true</span><br><span class="line">    path: true</span><br><span class="line">    link: true</span><br><span class="line">    permalink: true</span><br><span class="line">    excerpt: true</span><br><span class="line">    keywords: false</span><br><span class="line">    text: true</span><br><span class="line">    raw: false</span><br><span class="line">    content: false</span><br><span class="line">    author: true</span><br><span class="line">  posts:</span><br><span class="line">    title: true</span><br><span class="line">    slug: true</span><br><span class="line">    date: true</span><br><span class="line">    updated: true</span><br><span class="line">    comments: true</span><br><span class="line">    path: true</span><br><span class="line">    link: true</span><br><span class="line">    permalink: true</span><br><span class="line">    excerpt: true</span><br><span class="line">    keywords: false</span><br><span class="line">    text: true</span><br><span class="line">    raw: false</span><br><span class="line">    content: false</span><br><span class="line">    author: true</span><br><span class="line">    categories: true</span><br><span class="line">    tags: true</span><br></pre></td></tr></table></figure>
+<h4 id="hexo-renderer-less"><a href="#hexo-renderer-less" class="headerlink" title="hexo-renderer-less"></a>hexo-renderer-less</h4>渲染插件，支持less语言。<br><a href="https://github.com/hexojs/hexo-renderer-less" target="_blank" rel="noopener">插件地址</a><br>配置信息<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">less: ##这个好像可以不管。安装即可。</span><br><span class="line">  paths: []</span><br><span class="line">  compress：true</span><br></pre></td></tr></table></figure>
+<h4 id="hexo-generator-feed"><a href="#hexo-generator-feed" class="headerlink" title="hexo-generator-feed"></a>hexo-generator-feed</h4>订阅插件，主要生成blog订阅信息。<br><a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">插件地址</a><br>配置信息<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">feed:</span><br><span class="line">   type: atom ## RSS的类型(atom&#x2F;rss2)。</span><br><span class="line">   path: atom.xml ## 文件路径,默认是atom.xml&#x2F;rss2.xml。</span><br><span class="line">   limit: 20 ## 展示文章的数量,使用0或则false代表展示全部。</span><br><span class="line">   hub: ##PubSubHubbub的URL，不使用留空即可。</span><br><span class="line">   content: ## 在RSS文件中是否包含内容 ,true&#x2F;false默认不填为false</span><br><span class="line">   content_limit: ## 指定内容的长度作为摘要,仅仅在上面content设置为false并且没有自定义的描述。</span><br><span class="line">   content_limit_delim: &#39; &#39; ## 如果使用content_limit缩短文章内容，则仅在达到字符限制之前在此定界符的最后一次出现时才剪切，防止从中间截断。默认情况下不使用。</span><br><span class="line">   order_by: -date ## 订阅顺序</span><br><span class="line">   icon: icon.png  ## 自定义订阅图标</span><br><span class="line">   autodiscovery: true ## 添加订阅自动发现</span><br><span class="line">   template:  ## 自定义模板路径。</span><br></pre></td></tr></table></figure>
+<h2 id="补充配置说明"><a href="#补充配置说明" class="headerlink" title="补充配置说明"></a>补充配置说明</h2>主题文件里可能用到很多图标，为了达到美学效果的统一，可以选择里面的免费主题图标进行使用。<a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank" rel="noopener">免费图标集链接</a></li>
+</ul>
+
           
             <br>
             
@@ -514,6 +534,9 @@
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HEXO/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>HEXO</p></a></div>
+
 
         
       
@@ -530,7 +553,10 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/02/23/%E7%AC%AC%E4%BA%8C%E7%AF%87/&title=第二篇 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary="
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/02/25/HEXO%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/&title=HEXO入坑指南 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary=
+HEXO安装介绍
+HEXO插件说明
+补充配置说明"
           
           >
           
@@ -542,7 +568,10 @@
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2020/02/23/%E7%AC%AC%E4%BA%8C%E7%AF%87/&title=第二篇 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary="
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2020/02/25/HEXO%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/&title=HEXO入坑指南 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary=
+HEXO安装介绍
+HEXO插件说明
+补充配置说明"
           
           >
           
@@ -552,7 +581,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuUlEQVR42u3a0UrEQAwF0P3/n1bwSVhtb5KJu8jpUym2O6fCJE3yeMTHx9fxfOX79efz57uu702e+dg48PDw8FpL/+24Xu41+5p3Db7mJWvGw8PD2+ZdLyLZoK//prf1J3fdWPDw8PBeyqtuzfmCrgMDHh4e3v/gJQWCJEXOXwoeHh7eu/HyLT4vE1QZL6614OHh4cW8agPsHc4X+3t4eHh4g656cvSCxCS9LqwNDw8Pb4GX/0ySLufbdzKgUL0e1Vrw8PDwxryk4ZQXCCZFhOQlVteJh4eHt82rPjRvdFXLCvMhAzw8PLxtXuGGOLHOU/akzNF7Mh4eHt4GL992q8WIXqiYjC/chBw8PDy8o7y8TTW/kifTeTn45t+Dh4eH9+e8Xnm3OhAwGfwaBQY8PDy8o7y8TNArAU8GEQplYjw8PLyjvOpWXm1cTQJAtWF209/Dw8PDO8TLP+97mI3mVhOGh4eHd4h3qoDbe8K8zdb8VsDDw8Mb8PLUttq46g0i9F5Q/ot4eHh4c948zb1pPhVDSJ58R6ECDw8Pb4HX23yrYwG9hDgfuopKEnh4eHiHePNxqOoYVn5XNTA0YxEeHh5ei1fdoPNxq7yQkRzl9eDh4eEt8JKBgF6iPBmoWoHh4eHhHeL1Ut58W09CRX5eHuHCw8PDW+BNtu+z3/t5iJoHJzw8PLwJb/IzyWY9b6f1Rrt+mIzAw8PDO8TLB6ryQatJUCmkxdUPADw8PLxDvI/i0Sv75o2xvNwQfSXg4eHhLfCqm2++uW+3ypIQhYeHh7fHm7eX5m2wJLHO11ZIrPHw8PAGvHnZNEmjD1RN4kCCh4eH9268XjkjBydBKAo5eHh4eC/l9Yar8sZYnlIXXgoeHh7eGm+SNOfJd15cOPU0PDw8vA1erwFW7bAlC82bXkn5Aw8PD2+B9wmTT0EF6OjcLwAAAABJRU5ErkJggg=='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACt0lEQVR42u3a0W7CMAwFUP7/p5m0p0ms4dpO6CadPqFS0hw/JMbx4xFfz+/r5+fXO/kIr+MkYyZvaV54eHh4rannL1tT1yG4en49cjLa5ch4eHh4x3i9zSBf0HsbQxLiNxY8PDy8W3nzFDzZVNYhwMPDw/tfvHWBIE95qwk3Hh4e3t/k9RLc6pW/94ZaCx4eHl7M66XI934+fr6Hh4eH1zpV7y3KvW1gfuj1y6/w8PDwDvCq7U3VckC+xFfT5bw8gYeHh3eCN2+rSoq8e9tYk2fw8PDwTvAmf/WrKXgeuF77wuU/Bjw8PLytvL2p8K7ke9000LuPh4eHt4uXJKxJ60A+6WrxNw/rm54IPDw8vE28KilPbXtpdxWJh4eHdxcvT5EnG0m1jSAvZBQKHHh4eHhj3nN8TdoCJkt8NCYeHh7eMV5vEr0No1rMrY4cne/h4eHhjXlJsfVRvKoFiGpYoy0EDw8P7yZeDzBP05PjrqjRCg8PD+8YLym5To7/8/fO71+WcfHw8PA28fLSQLWQ2mtH6KXdv9zHw8PDO8bLSxLJ5KqMfENKAlHY9/Dw8PDGvOrGkJcJ5oXdJEB4eHh4n+T1mgB6aXECbpYeXmeCh4eHd4yXHDtVwfm3vU0iCjoeHh7eB3nJsts7xKq2pU6Sezw8PLxzvGoTai+lrvaUTtoULlsH8PDw8Ma86qTz18+fmbRq4eHh4Z3jrYerNlrtSq+rWXGzjIuHh4c35uXJa+/IKj/0SsIXjYmHh4d3gNcrQ/S+7RVqJ4VdPDw8vHO8fDOYp7mTxb35Wzw8PLxjvLz00Gs46OHzUL5pvcLDw8O7iTdPhasJdzX0hXwfDw8P7yZetTzxZhEvpuDlzgg8PDy8rbxJsaB6WNXbYJIA4eHh4X2G12u3qk6it/Tn42w738PDw8Nb8b4AaU9+45OTkYgAAAAASUVORK5CYII='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
         
@@ -562,7 +591,10 @@
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/02/23/%E7%AC%AC%E4%BA%8C%E7%AF%87/&title=第二篇 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary="
+          href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/02/25/HEXO%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/&title=HEXO入坑指南 | 大秦说&pics=https://raw.githubusercontent.com/qpmcool/EHS/master/img/personal_info.png&summary=
+HEXO安装介绍
+HEXO插件说明
+补充配置说明"
           
           >
           
@@ -572,7 +604,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuUlEQVR42u3a0UrEQAwF0P3/n1bwSVhtb5KJu8jpUym2O6fCJE3yeMTHx9fxfOX79efz57uu702e+dg48PDw8FpL/+24Xu41+5p3Db7mJWvGw8PD2+ZdLyLZoK//prf1J3fdWPDw8PBeyqtuzfmCrgMDHh4e3v/gJQWCJEXOXwoeHh7eu/HyLT4vE1QZL6614OHh4cW8agPsHc4X+3t4eHh4g656cvSCxCS9LqwNDw8Pb4GX/0ySLufbdzKgUL0e1Vrw8PDwxryk4ZQXCCZFhOQlVteJh4eHt82rPjRvdFXLCvMhAzw8PLxtXuGGOLHOU/akzNF7Mh4eHt4GL992q8WIXqiYjC/chBw8PDy8o7y8TTW/kifTeTn45t+Dh4eH9+e8Xnm3OhAwGfwaBQY8PDy8o7y8TNArAU8GEQplYjw8PLyjvOpWXm1cTQJAtWF209/Dw8PDO8TLP+97mI3mVhOGh4eHd4h3qoDbe8K8zdb8VsDDw8Mb8PLUttq46g0i9F5Q/ot4eHh4c948zb1pPhVDSJ58R6ECDw8Pb4HX23yrYwG9hDgfuopKEnh4eHiHePNxqOoYVn5XNTA0YxEeHh5ei1fdoPNxq7yQkRzl9eDh4eEt8JKBgF6iPBmoWoHh4eHhHeL1Ut58W09CRX5eHuHCw8PDW+BNtu+z3/t5iJoHJzw8PLwJb/IzyWY9b6f1Rrt+mIzAw8PDO8TLB6ryQatJUCmkxdUPADw8PLxDvI/i0Sv75o2xvNwQfSXg4eHhLfCqm2++uW+3ypIQhYeHh7fHm7eX5m2wJLHO11ZIrPHw8PAGvHnZNEmjD1RN4kCCh4eH9268XjkjBydBKAo5eHh4eC/l9Yar8sZYnlIXXgoeHh7eGm+SNOfJd15cOPU0PDw8vA1erwFW7bAlC82bXkn5Aw8PD2+B9wmTT0EF6OjcLwAAAABJRU5ErkJggg=='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACt0lEQVR42u3a0W7CMAwFUP7/p5m0p0ms4dpO6CadPqFS0hw/JMbx4xFfz+/r5+fXO/kIr+MkYyZvaV54eHh4rannL1tT1yG4en49cjLa5ch4eHh4x3i9zSBf0HsbQxLiNxY8PDy8W3nzFDzZVNYhwMPDw/tfvHWBIE95qwk3Hh4e3t/k9RLc6pW/94ZaCx4eHl7M66XI934+fr6Hh4eH1zpV7y3KvW1gfuj1y6/w8PDwDvCq7U3VckC+xFfT5bw8gYeHh3eCN2+rSoq8e9tYk2fw8PDwTvAmf/WrKXgeuF77wuU/Bjw8PLytvL2p8K7ke9000LuPh4eHt4uXJKxJ60A+6WrxNw/rm54IPDw8vE28KilPbXtpdxWJh4eHdxcvT5EnG0m1jSAvZBQKHHh4eHhj3nN8TdoCJkt8NCYeHh7eMV5vEr0No1rMrY4cne/h4eHhjXlJsfVRvKoFiGpYoy0EDw8P7yZeDzBP05PjrqjRCg8PD+8YLym5To7/8/fO71+WcfHw8PA28fLSQLWQ2mtH6KXdv9zHw8PDO8bLSxLJ5KqMfENKAlHY9/Dw8PDGvOrGkJcJ5oXdJEB4eHh4n+T1mgB6aXECbpYeXmeCh4eHd4yXHDtVwfm3vU0iCjoeHh7eB3nJsts7xKq2pU6Sezw8PLxzvGoTai+lrvaUTtoULlsH8PDw8Ma86qTz18+fmbRq4eHh4Z3jrYerNlrtSq+rWXGzjIuHh4c35uXJa+/IKj/0SsIXjYmHh4d3gNcrQ/S+7RVqJ4VdPDw8vHO8fDOYp7mTxb35Wzw8PLxjvLz00Gs46OHzUL5pvcLDw8O7iTdPhasJdzX0hXwfDw8P7yZetTzxZhEvpuDlzgg8PDy8rbxJsaB6WNXbYJIA4eHh4X2G12u3qk6it/Tn42w738PDw8Nb8b4AaU9+45OTkYgAAAAASUVORK5CYII='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
         
@@ -598,16 +630,16 @@
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
                             <h4>
-                                <a href="/2020/02/24/%E7%AC%AC%E4%B8%89%E6%89%B9/" rel="prev" title="第三批">
+                                <a href="/2020/02/27/%E5%BB%BA%E7%AB%99/" rel="prev" title="建站">
                                   
-                                      第三批
+                                      建站
                                   
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/tags/jQuery/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> jQuery</a> <a class="tag" href="/tags/%E8%A1%A8%E6%A0%BC/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 表格</a> <a class="tag" href="/tags/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 表单验证</a>
+                                    <a class="tag" href="/tags/HEXO/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> HEXO</a>
                                 </h6>
                             
                         </span>
@@ -618,9 +650,9 @@
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/2020/02/23/%E7%AC%AC%E4%B8%80%E7%AF%87/" rel="prev" title="第一篇">
+                                <a href="/2020/02/12/hello-world/" rel="prev" title="Hello World">
                                     
-                                        第一篇
+                                        Hello World
                                     
                                 </a>
                             </h4>
@@ -653,7 +685,7 @@
 
   <script>
     window.subData = {
-      title: '第二篇',
+      title: 'HEXO入坑指南',
       tools: true
     }
   </script>
@@ -669,6 +701,19 @@
       
         
           
+  <section class='widget   toc-wrapper'>
+    <header>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <!-- <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div> -->
+  
+</header>
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HEXO安装介绍"><span class="toc-text">HEXO安装介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEXO插件说明"><span class="toc-text">HEXO插件说明</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo-generator-search"><span class="toc-text">hexo-generator-search</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo-generator-json-content"><span class="toc-text">hexo-generator-json-content</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo-renderer-less"><span class="toc-text">hexo-renderer-less</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo-generator-feed"><span class="toc-text">hexo-generator-feed</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#补充配置说明"><span class="toc-text">补充配置说明</span></a></li></ol>
+    </div>
+  </section>
+
 
         
       

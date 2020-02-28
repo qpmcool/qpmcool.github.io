@@ -4,23 +4,23 @@
   
     
     <entry>
-      <title>go</title>
-      <link href="/2020/02/24/go-1/"/>
-      <url>/2020/02/24/go-1/</url>
+      <title>建站</title>
+      <link href="/2020/02/27/%E5%BB%BA%E7%AB%99/"/>
+      <url>/2020/02/27/%E5%BB%BA%E7%AB%99/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<ul><li>建站说明</li><li>文件说明</li><li>Github部署</li><li>Github图床设置</li></ul><a id="more"></a><p><btn class='regular'><a href="/"></a></btn></p><h2 id="建站说明"><a href="#建站说明" class="headerlink" title="建站说明"></a>建站说明</h2><p>安装 Hexo 完成后，执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\</span><br><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure><p>这样，最基本的一个Blog就算完成了。</p><h2 id="文件说明"><a href="#文件说明" class="headerlink" title="文件说明"></a>文件说明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\</span><br><span class="line">. </span><br><span class="line">├── _config.yml  ## 最基础的网站配置信息。版权信息和主题设置都在这里。</span><br><span class="line">├── package.json  ## 应用程序信息。可以查看网站使用的依赖。</span><br><span class="line">├── scaffolds  ## 模版 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</span><br><span class="line">├── source ## 资源文件夹是存放用户资源的地方。除 _posts 文件夹之外，开头命名为 _ (下划线)的文件 &#x2F; 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes ## 主题 文件夹。Hexo 会根据主题来生成静态页面。</span><br></pre></td></tr></table></figure><h2 id="Github部署"><a href="#Github部署" class="headerlink" title="Github部署"></a>Github部署</h2><h3 id="Github设置"><a href="#Github设置" class="headerlink" title="Github设置"></a>Github设置</h3><p>Github账号注册略。<br>创建Repository时，需要注意内容如下图<br><img src="https://raw.githubusercontent.com/qpmcool/EHS/master/img/Screen%20Shot%202020-02-28%20at%201.16.02%20PM.png" alt="Github创建Repository"><br>进入Repository，选择<btn><a href="/">Setting</a></btn><br><img src="https://raw.githubusercontent.com/qpmcool/EHS/master/img/Screen%20Shot%202020-02-28%20at%201.31.47%20PM.png" alt="选择Seetting"><br>拉到最后，选择<btn><a href="/">master branch</a></btn>(themes可不选）<br><img src="https://raw.githubusercontent.com/qpmcool/EHS/master/img/Screen%20Shot%202020-02-28%20at%201.33.51%20PM.png" alt="选择master branch"><br>如果有域名，在Custom domain输入域名。这时候项目根目录应该会出现一个名为CNAME的文件。如果没有，打开本地博客/source目录，新建CNAME文件，注意没有后缀。写上域名，保存。</p><h3 id="连接Github设置"><a href="#连接Github设置" class="headerlink" title="连接Github设置"></a>连接Github设置</h3><p>打开terminal键入以下内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\</span><br><span class="line">git config --global user.name &quot;github注册用户名&quot;</span><br><span class="line">git config --global user.email &quot;github注册邮箱&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;github注册邮箱&quot;</span><br><span class="line">cat ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br></pre></td></tr></table></figure><p>将输出的内容复制。<br>打开github主页，在头像下面点击<btn><a href="/">settings</a></btn>，再点击<btn><a href="/">SSH and GPG keys</a></btn>，新建一个SSH。<br>Title可以随便写，Key部分粘贴刚刚复制的内容。<br>回到Terminal，输入<code>ssh -T git@github.com</code>,出现<code>You&#39;ve successfully authenticated</code>字样，连接成功。<br>回到本地blog目录，打开<code>_config.yml</code>文件，搜索<code>deploy</code>，配置信息如下</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;username.github.io ## 浏览器上项目页的地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p><code>hexo-deployer-git</code>插件默认安装好的。<br>在blog目录中运行<code>hexo g &amp;&amp; hexo d</code>未报错。连接成功。</p><h2 id="Github图床设置"><a href="#Github图床设置" class="headerlink" title="Github图床设置"></a>Github图床设置</h2>]]></content>
       
       
       <categories>
           
-          <category> draft </category>
+          <category> HEXO </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> draft </tag>
+            <tag> HEXO </tag>
             
         </tags>
       
@@ -29,81 +29,25 @@
     
     
     <entry>
-      <title>go</title>
-      <link href="/2020/02/24/go/"/>
-      <url>/2020/02/24/go/</url>
+      <title>HEXO入坑指南</title>
+      <link href="/2020/02/25/HEXO%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/"/>
+      <url>/2020/02/25/HEXO%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/</url>
       
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>post</title>
-      <link href="/2020/02/24/post/"/>
-      <url>/2020/02/24/post/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>第三批</title>
-      <link href="/2020/02/24/%E7%AC%AC%E4%B8%89%E6%89%B9/"/>
-      <url>/2020/02/24/%E7%AC%AC%E4%B8%89%E6%89%B9/</url>
-      
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<ul><li>HEXO安装介绍</li><li>HEXO插件说明</li><li>补充配置说明<a id="more"></a><h2 id="HEXO安装介绍"><a href="#HEXO安装介绍" class="headerlink" title="HEXO安装介绍"></a>HEXO安装介绍</h2><btn class='regular'><a href="">安装前提</a></btn><br>安装HEXO比较简单。但需要先安装以下内容：</li><li>Node.js</li><li>Git<br>Node.js建议使用NVM安装。<a href="https://github.com/nvm-sh/nvm/blob/master/README.md" target="_blank" rel="noopener">NVM的Github链接</a><br>terminal安装完成后，确认自己使用terminal类型，在用户根目录下查看以下文件(~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc)，修改为对应终端的配置文件名称，重启terminal即可使用。<br><code>nvm install stable ## 安装最新的稳定版nodejs和npm</code><br>Git安装去官网下载客户端安装即可。<br><btn class='regular'><a href="">安装HEXO</a></btn><br>启动terminal，执行<br><code>npm install -g hexo-cli</code>安装hexo基本命令行。<br>完成后，可以进入该目录使用hexo命令。也可以添加环境变量，直接使用。<h2 id="HEXO插件说明"><a href="#HEXO插件说明" class="headerlink" title="HEXO插件说明"></a>HEXO插件说明</h2>使用终端安装HEXO插件，一般插件配置在themes文件夹内的<red>_config.yml</red>文件进行修改。以下列出的插件应用比较多，其他有用的插件也很多，可以去hexo官网插件去搜索相关内容。<br><code>npm install 包名</code><br><btn class='regular'><a href="">常用包介绍</a></btn><h4 id="hexo-generator-search"><a href="#hexo-generator-search" class="headerlink" title="hexo-generator-search"></a>hexo-generator-search</h4>搜索插件，生成HEXO搜索数据<br><a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">插件地址</a><br>配置信息<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml ## 默认值，文件路径。</span><br><span class="line">  field: post ## 默认值，搜索范围可以是（post，page，all）。</span><br><span class="line">  content: true ## 默认值，如果是false，只搜索标题和其他meta信息。</span><br></pre></td></tr></table></figure><h4 id="hexo-generator-json-content"><a href="#hexo-generator-json-content" class="headerlink" title="hexo-generator-json-content"></a>hexo-generator-json-content</h4>内容插件，产生JSON文件，为通用的一些内容服务。非常适用为一些小型的服务提供紧凑数据。<br><a href="https://github.com/alexbruno/hexo-generator-json-content" target="_blank" rel="noopener">插件地址</a><br>配置信息（默认内容）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">  meta: true</span><br><span class="line">  dafts: false</span><br><span class="line">  file: content.json</span><br><span class="line">  keywords: undefined</span><br><span class="line">  dateFormat: undefined</span><br><span class="line">  pages:</span><br><span class="line">    title: true</span><br><span class="line">    slug: true</span><br><span class="line">    date: true</span><br><span class="line">    updated: true</span><br><span class="line">    comments: true</span><br><span class="line">    path: true</span><br><span class="line">    link: true</span><br><span class="line">    permalink: true</span><br><span class="line">    excerpt: true</span><br><span class="line">    keywords: false</span><br><span class="line">    text: true</span><br><span class="line">    raw: false</span><br><span class="line">    content: false</span><br><span class="line">    author: true</span><br><span class="line">  posts:</span><br><span class="line">    title: true</span><br><span class="line">    slug: true</span><br><span class="line">    date: true</span><br><span class="line">    updated: true</span><br><span class="line">    comments: true</span><br><span class="line">    path: true</span><br><span class="line">    link: true</span><br><span class="line">    permalink: true</span><br><span class="line">    excerpt: true</span><br><span class="line">    keywords: false</span><br><span class="line">    text: true</span><br><span class="line">    raw: false</span><br><span class="line">    content: false</span><br><span class="line">    author: true</span><br><span class="line">    categories: true</span><br><span class="line">    tags: true</span><br></pre></td></tr></table></figure><h4 id="hexo-renderer-less"><a href="#hexo-renderer-less" class="headerlink" title="hexo-renderer-less"></a>hexo-renderer-less</h4>渲染插件，支持less语言。<br><a href="https://github.com/hexojs/hexo-renderer-less" target="_blank" rel="noopener">插件地址</a><br>配置信息<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">less: ##这个好像可以不管。安装即可。</span><br><span class="line">  paths: []</span><br><span class="line">  compress：true</span><br></pre></td></tr></table></figure><h4 id="hexo-generator-feed"><a href="#hexo-generator-feed" class="headerlink" title="hexo-generator-feed"></a>hexo-generator-feed</h4>订阅插件，主要生成blog订阅信息。<br><a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">插件地址</a><br>配置信息<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">feed:</span><br><span class="line">   type: atom ## RSS的类型(atom&#x2F;rss2)。</span><br><span class="line">   path: atom.xml ## 文件路径,默认是atom.xml&#x2F;rss2.xml。</span><br><span class="line">   limit: 20 ## 展示文章的数量,使用0或则false代表展示全部。</span><br><span class="line">   hub: ##PubSubHubbub的URL，不使用留空即可。</span><br><span class="line">   content: ## 在RSS文件中是否包含内容 ,true&#x2F;false默认不填为false</span><br><span class="line">   content_limit: ## 指定内容的长度作为摘要,仅仅在上面content设置为false并且没有自定义的描述。</span><br><span class="line">   content_limit_delim: &#39; &#39; ## 如果使用content_limit缩短文章内容，则仅在达到字符限制之前在此定界符的最后一次出现时才剪切，防止从中间截断。默认情况下不使用。</span><br><span class="line">   order_by: -date ## 订阅顺序</span><br><span class="line">   icon: icon.png  ## 自定义订阅图标</span><br><span class="line">   autodiscovery: true ## 添加订阅自动发现</span><br><span class="line">   template:  ## 自定义模板路径。</span><br></pre></td></tr></table></figure><h2 id="补充配置说明"><a href="#补充配置说明" class="headerlink" title="补充配置说明"></a>补充配置说明</h2>主题文件里可能用到很多图标，为了达到美学效果的统一，可以选择里面的免费主题图标进行使用。<a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank" rel="noopener">免费图标集链接</a></li></ul>]]></content>
       
       
       <categories>
           
-          <category> web前端 </category>
+          <category> HEXO </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> jQuery </tag>
-            
-            <tag> 表格 </tag>
-            
-            <tag> 表单验证 </tag>
+            <tag> HEXO </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>第二篇</title>
-      <link href="/2020/02/23/%E7%AC%AC%E4%BA%8C%E7%AF%87/"/>
-      <url>/2020/02/23/%E7%AC%AC%E4%BA%8C%E7%AF%87/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>第一篇</title>
-      <link href="/2020/02/23/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
-      <url>/2020/02/23/%E7%AC%AC%E4%B8%80%E7%AF%87/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
       
     </entry>
     
